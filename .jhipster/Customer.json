@@ -1,0 +1,58 @@
+{
+    "name": "Customer",
+    "fields": [
+        {
+            "fieldName": "fullName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "Gender",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone1",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "phone2",
+            "fieldType": "String"
+        },
+        {
+         "fieldName": "description",
+         "fieldType": "String"
+         },
+        {
+            "fieldName": "guarantorName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "guarantorPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address2",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        
+    ],
+    "changelogDate": "20191115110354",
+    "entityTableName": "Customer",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}
