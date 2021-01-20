@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { Colors, Metrics } from '../../shared/themes'
+import { Colors, Metrics, Fonts } from '../../shared/themes'
 import metrics from '../../shared/themes/metrics'
 
 export default StyleSheet.create({
@@ -28,6 +28,8 @@ export default StyleSheet.create({
     paddingHorizontal: Metrics.doubleBaseMargin,
   },
   rowLabel: {
+    fontFamily: Fonts.type.description,
+    fontSize: Fonts.size.input,
     color: Colors.charcoal,
   },
   inputContainer:{
@@ -75,9 +77,10 @@ export default StyleSheet.create({
   },
   loginText: {
     marginLeft:10,
+    fontFamily: Fonts.type.text,
     textAlign: 'center',
     color: Colors.silver,
-    fontSize:20
+    fontSize:21
   },
   topLogo: {
     alignSelf: 'center',
@@ -85,4 +88,10 @@ export default StyleSheet.create({
     width:120,
     height:120,
   },
+  switchText:{
+    fontFamily:Fonts.type.text,
+    fontWeight:'400',
+    textAlign: 'center',
+    fontSize:20
+  }
 })

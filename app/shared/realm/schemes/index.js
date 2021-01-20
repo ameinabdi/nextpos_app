@@ -22,6 +22,7 @@ export const Account = {
     paymentMethod:{ type: 'PaymentMethod'},
     shop:{type:'Shop'},
     token:{ type: 'string', optional: true},
+    tenantId:{ type: 'string', optional: true},
     }
   }
 
@@ -45,6 +46,7 @@ export const Account = {
     updatedById:{ type: 'string', optional: true},
     }
   }
+
 
   export const PaymentMethod = {
     name: 'PaymentMethod',

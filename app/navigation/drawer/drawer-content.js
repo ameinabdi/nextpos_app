@@ -98,15 +98,15 @@ class DrawerContent extends Component {
          <View style={styles.header}>
            <Image testID="drawerLogo" source={Images.logoLogin} style={styles.logo} />
          </View>
-          <DrawerButton testID="orderlistDrawerButton" text="Orders" onPress={this.handlePressOrders} />
-          <DrawerButton testID="customerDrawerButton" text="Customers" onPress={this.handlePressCustomer} />
+          <DrawerButton testID="orderlistDrawerButton" text="Orders"  icon="tag" onPress={this.handlePressOrders} />
+          <DrawerButton testID="customerDrawerButton" text="Customers" icon="user" onPress={this.handlePressCustomer} />
 
-          <DrawerButton testID="entitiesDrawerButton" text="Attendance" onPress={this.handlePressAttendance} />
+          <DrawerButton testID="entitiesDrawerButton" text="Attendance" icon="calendar" onPress={this.handlePressAttendance} />
           {/* <DrawerButton testID="settingsDrawerButton" text="Settings" onPress={this.handlePressSettings} /> */}
           {/* <DrawerButton testID="changePasswordDrawerButton" text="Change Password" onPress={this.handlePressChangePassword} /> */}
-          <DrawerButton testID="printerDrawerButton" text="Print" onPress={this.handlePressPrint} />
+          <DrawerButton testID="printerDrawerButton" text="Print" icon="check" onPress={this.handlePressPrint} />
 
-          <DrawerButton testID="logoutDrawerButton" text="Logout" onPress={this.handlePressLogout} />
+          <DrawerButton testID="logoutDrawerButton" text="Logout" icon="logout" onPress={this.handlePressLogout} />
 
       </ScrollView>
     )

@@ -15,7 +15,7 @@ class DrawerButton extends React.Component {
   render() {
     return (
       <TouchableOpacity testID={this.props.testID} onPress={this.props.onPress} style={styles.button}>
-        <Icon name="checkcircle" size={23} color={Colors.title} />
+        <Icon name={this.props.icon} size={23} color={Colors.primaryText} />
         <Text style={styles.text}>{this.props.text}</Text>
       </TouchableOpacity>
     )

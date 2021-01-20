@@ -63,7 +63,7 @@ export const requestAll = (state) => {
 export const removeCurrentAccount= (state) => state.merge({ account: null,currency:null })
 
 export const setRequest = (state) => state.merge({ fetching: true,})
-export const switchAccountRequest = (state) => state.merge({ fetching: true, account: null,})
+export const switchAccountRequest = (state) => state.merge({ fetching: true, })
 export const lockScreen = (state) => state.merge({ fetching: false, account: null,  error: null,  accountToken:null,})
 
 
@@ -106,7 +106,7 @@ export const successAll = (state, action) => {
 
 export const switchAccountSuccess = (state, data) => {
   const { account } = data
-  return state.merge({ fetching: false, error: null, account,currency:account.shop ? account.shop.currency   :null })
+  return state.merge({ fetching: false, error: null })
 }
 
 export const Locksuccess = (state, data) => {
@@ -122,7 +122,7 @@ export const failure = (state, { error }) => state.merge({ fetching: false, upda
 export const failureAll = (state, { error }) => state.merge({ fetchingAll: false, updating: false, accounts: [], errorAll:error })
 
 
-export const switchAccountfailure = (state, { error }) => state.merge({ fetching: false, updating: false, account: null, error })
+export const switchAccountfailure = (state, { error }) => state.merge({ fetching: false, updating: false, error })
 
 export const Lockfailure = (state, { error }) => state.merge({ fetching: false,lockpin:null, updating: false, error })
 

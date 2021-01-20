@@ -2,7 +2,7 @@ import { call, put } from 'redux-saga/effects'
 
 import AccountActions from '../reducers/account.reducer'
 import { callApi } from './call-api.saga'
-import { storeInDbAccount, fetchAll,deleteInDbAccount, updateInDbAccount } from '../realm/account';
+import { storeInDbAccount, fetchAll,fetchOne, deleteInDbAccount, updateInDbAccount } from '../realm/account';
 
 // attempts to account
 export function* getAccount(api,action) {
@@ -18,9 +18,15 @@ export function* getAccount(api,action) {
     yield put(AccountActions.accountSuccess(response.data, Auth))
 
   } else {
-    console.tron.log('Account - FAIL')
-    yield call(api.removeAuthToken)
-    yield put(AccountActions.accountFailure((response.data && response.data.detail) || 'Failed to get account'))
+    const responseDb = yield call(fetchAll)
+    if(responseDb.ok && responseDb.data[0]){
+      yield put(AccountActions.accountSuccess(responseDb.data[0], {email:responseDb.data[0].email, password:responseDb.data[0].password}))
+    }else{
+      console.tron.log('Account - FAIL')
+      yield call(api.removeAuthToken)
+      yield put(AccountActions.accountFailure((response.data && response.data.detail) || 'Failed to get account'))
+    }
+   
   }
 }
 

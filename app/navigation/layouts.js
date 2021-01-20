@@ -101,7 +101,7 @@ export const appStack = () =>
         options: {
           sideMenu: {
             left: {
-              width: Metrics.screenWidth / 2.2,
+              width: Metrics.screenWidth / 3.2,
             },
           },
         },

@@ -4,7 +4,7 @@ const type = {
   emphasis: 'HelveticaNeue-Italic',
   title: 'Roboto-Bold',
   text: 'Roboto-Medium',
-  description: 'Roboto.Light',
+  description: 'Roboto-Light',
 }
 
 const size = {

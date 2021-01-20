@@ -40,7 +40,6 @@ class CategoryEntityScreen extends React.PureComponent {
   }
   showProduct=(data)=>{
     const { account } = this.props;
-    console.tron.log('daa',data)
     this.props.getAllProducts({ tenantId:account.tenants[0] ? account.tenants[0].tenantId : null,categoryId:data.id })
     // this.props.showProduct(data)
   }
@@ -58,8 +57,8 @@ class CategoryEntityScreen extends React.PureComponent {
   
   fetchCategories = () => {
     const { account } = this.props;
-
-    this.props.getAllCategories({ tenantId:account.tenants[0] ? account.tenants[0].tenantId : null })
+    console.tron.log('ssss', account)
+    this.props.getAllCategories({ tenantId: account.tenantId })
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {

@@ -2,15 +2,17 @@ import { Metrics, Colors, Fonts } from '../../shared/themes'
 
 export default {
   text: {
-    ...Fonts.style.h5,
     color: Colors.title,
-    marginLeft: Metrics.baseMargin,
+    marginLeft: Metrics.doubleBaseMargin,
+    fontFamily:Fonts.type.text,
+    fontWeight:'300',
+    fontSize:Fonts.size.h5
   },
 
   button:{
     flex:1,
     flexDirection:'row',
-    marginVertical: Metrics.baseMargin,
+    marginVertical: Metrics.doubleBaseMargin,
 
   }
 }

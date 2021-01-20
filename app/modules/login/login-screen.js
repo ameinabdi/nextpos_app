@@ -90,7 +90,7 @@ class LoginScreen extends React.Component {
         <View style={styles.form}>
         <Image source={Images.logoLogin} style={[styles.topLogo, this.state.topLogo]} />
           <View style={styles.row}>
-            <Text style={styles.rowLabel}>Email</Text>
+            <Text style={styles.rowLabel}>Email, Username, Phone</Text>
             <View style={styles.inputContainer}>
             <Icon name="user" size={25} color={Colors.borders} style={styles.icon}/>
             <TextInput
@@ -150,7 +150,7 @@ class LoginScreen extends React.Component {
           </View>
           <View style={styles.row}>
              <Button transparent style={{alignSelf:'center'}} onPress={this.handleCheckAccount}>
-                 <Text style={styles.forgetText}>Switch Account</Text>
+                 <Text style={styles.switchText}>Switch Account</Text>
              </Button>
            </View>
         </View>

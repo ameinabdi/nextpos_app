@@ -28,6 +28,7 @@ export const storeInDbAccount = (object, token, auth) =>
             paymentMethod:object.paymentMethod,
             shop:object.shop,
             token:token,
+            tenantId: object.tenants[0] ? object.tenants[0].tenantId : null
           };
 
           realm.create('Account', objectSave, true)
@@ -62,6 +63,23 @@ export const fetchAll = ()  =>
     }
   })
 
+
+  export const fetchOne = ()  =>
+  new Promise((resolve, reject) => {
+    try {
+      const response = realm.objects('Account').filtered(`id = ${id}`)
+      resolve({
+        'ok': true,
+        'data':response
+      })
+    } catch (e) {
+      resolve({
+        'ok':false,
+        'data':e
+      })
+      console.tron.log('Error on creation',e)
+    }
+  })
 
 export const updateInDbAccount = (object) =>
   new Promise((resolve, reject) => {

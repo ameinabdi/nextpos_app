@@ -60,6 +60,7 @@ class SwitchAccountScreen extends React.Component {
   }
   selectUser = (user) => {
     // attempt a login - a saga is listening to pick it up from here.
+    this.props.switchAccount(user)
     lockScreen(user)
   }
 

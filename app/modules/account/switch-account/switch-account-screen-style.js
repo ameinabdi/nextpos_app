@@ -25,15 +25,15 @@ export default StyleSheet.create({
     width:Metrics.screenWidth/1,
     justifyContent:'center',
     alignItems:'center',
-    borderRadius: 4,
+    borderRadius: 50,
   },
   row: {
     flexDirection:'column',
     width:Metrics.screenWidth/2.5,
     height:150,
-    borderRadius:5,
+    borderRadius:20,
     alignItems:'center',
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.primaryText,
     marginVertical:15,
     marginHorizontal: Metrics.smallMargin,
     justifyContent: 'center',
@@ -55,7 +55,8 @@ export default StyleSheet.create({
     borderRadius:100,
   },
   boldLabel:{
-      fontSize:20,
+      fontSize:22,
+      color:Colors.white
   },
   label:{
     fontSize:18,
@@ -69,8 +70,8 @@ export default StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     borderRadius: 10,
-    borderColor: Colors.primary,
-    backgroundColor: Colors.primary,
+    borderColor: Colors.primaryText,
+    backgroundColor: Colors.primaryText,
     padding: 6,
    
   },

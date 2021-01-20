@@ -2,6 +2,7 @@ const colors = {
   primary:'#07ce65',
   secondary:'#03234A',
   greenish:'#9FFBCB',
+  primaryText:'#3BD282',
   title:'#252646',
   text: '#858BA6',
   background: '#eaf6ef',
