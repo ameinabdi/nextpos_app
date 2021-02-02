@@ -18,16 +18,16 @@ export function* getProduct(api, action) {
 }
 
 export function* getProducts(api, action) {
-  const { options } = action
+  const { products } = action
   // make the call to the api
-  const apiCall = call(api.getProducts, options)
-  const response = yield call(callApi, apiCall)
+  // const apiCall = call(api.getProducts, options)
+  // const response = yield call(callApi, apiCall)
 
   // success?
-  if (response.ok) {
-    yield put(ProductActions.productAllSuccess(response.data))
+  if (products) {
+    yield put(ProductActions.productAllSuccess(products))
   } else {
-    yield put(ProductActions.productAllFailure(response.data))
+    yield put(ProductActions.productAllFailure("error"))
   }
 }
 

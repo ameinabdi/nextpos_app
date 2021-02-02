@@ -50,7 +50,7 @@ class ProductEntityScreen extends React.PureComponent {
     let oderItem = {...item, 'totalPrice':item.price,'totalTax':item.tax}
     return (
         <TouchableOpacity  style={styles.product} onPress={()=>this.toggleModal(item)}>
-            <Image source={{uri: item.productThumbnail ? item.productThumbnail[0] ? item.productThumbnail[0].downloadUrl: 'https://midone-laravel.left4code.com/dist/images/food-beverage-12.jpg' : 'https://midone-laravel.left4code.com/dist/images/food-beverage-12.jpg'}} style={styles.thumbnail}/>
+            <Image source={{uri: item.productThumbnail ? item.productThumbnail[0] ? item.productThumbnail[0].name: 'https://midone-laravel.left4code.com/dist/images/food-beverage-12.jpg' : 'https://midone-laravel.left4code.com/dist/images/food-beverage-12.jpg'}} style={styles.thumbnail}/>
             <View style={styles.productfooter}>
                <Text style={styles.productName} numberOfLines={2}>{item.productName}</Text>
             </View>
@@ -72,10 +72,10 @@ class ProductEntityScreen extends React.PureComponent {
   }
   static getDerivedStateFromProps(nextProps, prevState) {
 
-    if (nextProps.products.rows) {
+    if (nextProps.products) {
       return {
-        done: nextProps.products.rows.length < prevState.size,
-        dataObjects: [ ...nextProps.products.rows],
+        done: nextProps.products.length < prevState.size,
+        dataObjects: [ ...nextProps.products],
       }
     }
     return null

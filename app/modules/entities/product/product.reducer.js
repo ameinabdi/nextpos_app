@@ -7,7 +7,7 @@ import { parseHeaderForLinks } from '../../../shared/util/url-utils'
 
 const { Types, Creators } = createActions({
   productRequest: ['productId'],
-  productAllRequest: ['options'],
+  productAllRequest: ['products'],
   productUpdateRequest: ['product'],
   productSearchRequest: ['query'],
   productDeleteRequest: ['productId'],

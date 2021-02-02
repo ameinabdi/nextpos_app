@@ -40,7 +40,7 @@ class CategoryEntityScreen extends React.PureComponent {
   }
   showProduct=(data)=>{
     const { account } = this.props;
-    this.props.getAllProducts({ tenantId:account.tenants[0] ? account.tenants[0].tenantId : null,categoryId:data.id })
+    this.props.getAllProducts(data.product)
     // this.props.showProduct(data)
   }
 

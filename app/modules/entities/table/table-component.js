@@ -63,7 +63,7 @@ class TableComponent extends React.PureComponent {
   fetchTables = () => {
     const { account } = this.props;
 
-    this.props.getAllTables({ tenantId:account.tenants[0] ? account.tenants[0].tenantId : null })
+    this.props.getAllTables({ tenantId:account.tenantId})
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
